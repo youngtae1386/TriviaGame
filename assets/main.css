@@ -1,0 +1,50 @@
+body{
+    text-align: center;
+    background: rgb(0, 83, 67);
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+h2{
+  color: whitesmoke;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+#countDiv{
+    font-family: sans-serif;
+    color: whitesmoke;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+#progressBar{
+    height:24px;
+    width: 100%;
+    /* color: blue; */
+    background: rgb(104, 103, 103);
+    padding: 2px;
+    
+}
+
+/* 
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #00BF96;
+    display: inline-block;
+} */
+
+#countDiv div span{
+    padding: 8px;
+    border-radius: 7px;
+    background:  rgb(104, 103, 103);
+    display: inline-flex;
+}
+
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
+}
