@@ -1,60 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <!-- <script language="javascript" type="text/javascript" src="assets/libraries/p5.js"></script>
-    <script language="javascript" src="assets/libraries/p5.dom.js"></script>-->
-
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
+  <title>Food Trivia</title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/main.css">
+  <script type="text/javascript" src="assets/libraries/main.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 </head>
 
-
-
 <body>
-  <div id="countDiv">
-    <h1></h1>
+  <div class="wrapper">
+    <h1>
+      <div class="gallery">
 
-    <img src="assets\images\trivia.jpg" alt="trivia" width="800">
-    <h2>Countdown</h2>
-    <div>
-      <p> Time Remaining <span id="countDownTimer">50 </span> Seconds</p>
-      <progress value="0" max="50" id="progressBar"></progress>
-    </div>
+        <img src="assets/images/trivia.jpg" class="img-fluid">
+      </div>
+
+    </h1>
+
+
+    <div id="questionSections"></div>
+    <div id="answerblock"></div>
+    <button class="btn btn-success" id="start">Start Game</button><br>
+
+
+    <div class="progress"></div>
+    <div id="time"></div>
+
+    <button class="btn btn-success" id="playOver">Play Again?</button>
+
   </div>
-
- 
-<div class="questions">
-  <p id="quiz"></p>
-  <button id="submit">Get Results</button>
-  <p id="results"></p>
-</div>
-
-
 </body>
-
-
-
-
-
-<!-- 
-/***** working count down timer
-
-    setTimeout(function () {
-        var millis = Date.now() - start;
-
-        console.log("seconds elapsed = " + Math.floor(millis/1000));
-        // expected output : seconds elapsed = 2
-    }, 1000);
-*****/ -->
-<script language="javascript" src="assets/libraries/main.js"></script>
 
 </html>

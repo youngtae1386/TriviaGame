@@ -1,86 +1,99 @@
- body{
-    text-align: center;
-    background: rgb(0, 83, 67);
-  font-family: sans-serif;
-  font-weight: 100;
-} 
-
-h2{
-  color: whitesmoke;
-  font-weight: 100;
-  font-size: 40px;
-  margin: 40px 0px 20px;
+#timer{
+    color: lightgrey;
 }
-
-#countDiv{
-    font-family: sans-serif;
-    color: whitesmoke;
-    display: inline-block;
-    font-weight: 100;
-    text-align: center;
-    font-size: 30px;
+.answerchoice {
+	border: 1px solid black;
+  border-radius: 5%;
+	width: 40%;
+	color: black;
+  text-align: center;
+  margin: 10px auto;
+  font-size: 20px;
+  background-color: white;
 }
-#progressBar{
-    height:24px;
-    width: 100%;
-    /* color: blue; */
-    background: rgb(104, 103, 103);
-    padding: 2px;
-    
-}
-
-
-#clockdiv > div{
-    padding: 10px;
-    border-radius: 3px;
-    background: #00BF96;
-    display: inline-block;
-} 
-
- #countDiv div span{
-    padding: 8px;
-    border-radius: 7px;
-    background:  rgb(104, 103, 103);
-    display: inline-flex;
-}
-
-.smalltext{
-    padding-top: 5px;
-    font-size: 16px;
-} 
-
-
-
-body{
-    font-size: 20px;
-    font-family: sans-serif;
-    color: #333; 
- }
-.question{
-    font-weight: 600;
-}
-.answers {
-    margin-bottom: 20px;
-}
-#submit{
-    font-family: sans-serif;
-    font-size: 20px;
-    background-color: #297;
-    color: #fff;
-    border: 0px;
-    border-radius: 3px;
-    padding: 20px;
+.answerchoice:hover {
+    background-color: yellow;
     cursor: pointer;
-    margin-bottom: 20px;
-}
-#submit:hover{
-    background-color: #3a8;
 }
 
-label {
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 20px;
-    font-weight: 700;
-    padding: 16px;
+img {
+  max-height: 250px;
+  width: auto;
+}
+
+#answerblock {
+  text-align: center;
+
+}
+
+#questionblock {
+  text-align: center;
+  font-weight: bold;
+}
+
+#reset {
+  visibility: visible;
+}
+
+body {
+    background-image: url(assets/images/goldenBridge.jpg);
+    background-size: cover;
+    background-color: black;
+    font-family: 'Slabo 27px', serif;
+}
+
+
+h1 {
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  padding: 20px;
+  font-size: 45px;
+}
+
+p {
+  margin: 10px;
+  font-weight: bold;
+  color: hotpink;
+  font-size: 40px;
+  background: black;
+}
+
+h2, h4 {
+  font-size: 40px;
+  color: black;
+  margin: 30px;
+  font-weight: bold;
+  background-color: red;
+ 
+}
+
+h3{
+    color: lightgrey;
+}
+
+.wrapper {
+    
+    margin: 10px auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* border: 2px solid #403fd3; */
+    height: 680px;
+    width: 60%;
+    text-align: center;
+    background-image: url(images/goldenBridge.jpg);
+    background-size: cover;
+}
+    .btn {
+        position: relative;
+        bottom: -50px;
+    }
+
+    .progress {
+        width: 300px;
+        display: -webkit-inline-flex;
+    }
+
+
+img{
+    position: relative;
 }
