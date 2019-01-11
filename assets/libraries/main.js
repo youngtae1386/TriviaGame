@@ -63,6 +63,57 @@ $(document).ready(function () {
             photo: "assets/images/guava.gif"
         }];
 
+    
+
+        $("#reset").hide();
+        //click start button to start game
+        $("#start").on("click", function () {
+                $("#start").hide();
+                displayQuestion();
+                runTimer();
+                for(var i = 0; i < options.length; i++) {
+            holder.push(options[i]);
+        }
+
+        //count down the timer start
+        var correctCount = 0;
+        var wrongCount = 0;
+        var unanswerCount = 0;
+        var timer = 20;
+        var intervalId;
+        var userGuess ="";
+        var running = false;
+        var qCount = options.length;
+        var pick;
+        var index;
+        var newArray = [];
+        var holder = [];
+
+        function runTimer() {
+            if (!running) {
+                intervalid = setInterval(decrement, 1000);
+                running = true
+            }
+          }
+          function decrement() {
+              $("#timeleft").html("<h3>Time remaining: " + timer + timer + "<h3>");
+              timer --;
+
+              // stop timer if reach 0
+              if (timer === 0) {
+                  unanswerCount++;
+                  stop();
+                  $("#answerblock").html("<p> Time is up! The Correct Answer: " + pick.choice[pic.answer] + "</p>");
+                  hidepicture();
+              }
+            }
+function
+
+
+
+
+
+
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
