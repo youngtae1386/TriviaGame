@@ -1,33 +1,33 @@
 $(document).ready(function () {
     var options = [
         {
-            question: "How old is the universe??",
+            question: "'About'How old is the universe??",
             choice: ["15-20 billion years old", "20-25 billion years old", "1-5 billion years old", "100 million years old"],
             answer: 0,
-            photo: "assets/images/Galaxy-Universe.jpg"
+            photo: "assets/images/Galaxy-Age.jpg"
         },
         {
-            question: "How old is the earth?",
+            question: "'About' how old is the earth?",
             choice: ["about 3.9 billion years old", "about 4.5 billion years old", "about 1 billion years old", "900 million years old"],
             answer: 1,
             photo: "assets/images/earth.jpg"
         },
         {
-            question: "What explorer introduced pigs to North America?",
-            choice: ["Johnson Columbus", "Viking", "Indian", "Christopher Columbus"],
-            answer: 3,
-            photo: "assets/images/ChristopherColumbusPig.jpg"
+            question: "Which is hotter, the center of the earth or surface of the sun?",
+            choice: ["Earth Core", "Sun Surface"],
+            answer: 0,
+            photo: "assets/images/earth-Core.jpg"
         },
         {
             question: "Which planet is closest to the sun?",
             choice: ["Earth", "Mercury", "Mars", "Moon"],
             answer: 1,
-            photo: "assets/images/closestToSun.jpg"
+            photo: "assets/images/Galaxy-Universe3.jpg"
         },
         {
-            question: "What’s the most malleable metal?",
-            choice: ["silver", "steel", "metal", "gold"],
-            answer: 3,
+            question: "What are the two main metals in the earth’s core?",
+            choice: ["iron & nickel", "steel & iron", "gold & platinum", "gold & uranium"],
+            answer: 0,
             photo: "assets/images/gold.jpg"
         },
         {
@@ -37,17 +37,17 @@ $(document).ready(function () {
             photo: "assets/images/trash.jpg"
         },
         {
-            question: "What do doctors look at through an ophthalmoscope?",
-            choice: ["eye", "Ear", "Mouth", "Chest"],
+            question: "What is the name of the largest ocean on earth?",
+            choice: ["Pacific Ocean", "Atlantic Ocean", "Gulf Ocean", "Arctic Ocean"],
             answer: 0,
-            photo: "assets/images/eye.JPG"
+            photo: "assets/images/o-pacific.jpg"
         }];
 
 
 
     var rightCount = 0;
     var wrongCount = 0;
-    var unansweredCount = 0;
+    var unAnsweredCount = 0;
     var timer = 10;
     var intervalId;
     var userGuess = "";
@@ -96,7 +96,7 @@ $(document).ready(function () {
 
         //stop timer if reach 0 actullay -1
         if (timer === -1) {
-            unansweredCount++;
+            unAnsweredCount++;
             stop();
             $("#answerblock").html("<p>Time Up! Answer is: " + pick.choice[pick.answer] + "</p>");
             hidepicture();
@@ -170,16 +170,16 @@ $(document).ready(function () {
             // $('.wrapper').css("background-image", "url(assets/images/goldenBridge.jpg)");  
 
             //run the score screen if all questions answered
-            if ((wrongCount + rightCount + unansweredCount) === qCount) {
+            if ((wrongCount + rightCount + unAnsweredCount) === qCount) {
                 $("#questionSections").empty();
                 $("#questionSections").html("<h3>Game Over! </h3>");
                 $("#answerblock").append("<h4> Correct: " + rightCount + "</h4>");
                 $("#answerblock").append("<h4> Incorrect: " + wrongCount + "</h4>");
-                $("#answerblock").append("<h4> Unanswered: " + unansweredCount + "</h4>");
+                $("#answerblock").append("<h4> Un-Answered: " + unAnsweredCount + "</h4>");
                 $("#playOver").show();
                 rightCount = 0;
                 wrongCount = 0;
-                unansweredCount = 0;
+                unAnsweredCount = 0;
 
             } else {
                 runTimer();
