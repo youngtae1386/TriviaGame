@@ -98,7 +98,7 @@ $(document).ready(function () {
         if (timer === -1) {
             unansweredCount++;
             stop();
-            $("#answerblock").html("<p>Time is up! The correct answer is: " + pick.choice[pick.answer] + "</p>");
+            $("#answerblock").html("<p>Time Up! Answer is: " + pick.choice[pick.answer] + "</p>");
             hidepicture();
         }
     }
