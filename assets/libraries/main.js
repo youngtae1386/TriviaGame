@@ -130,12 +130,12 @@ $(document).ready(function () {
 
 
 
-        //click function to select answer and outcomes
+        //user click the answer
         $(".answerchoice").on("click", function () {
             //grab array position from userGuess
             userGuess = parseInt($(this).attr("data-guessvalue"));
 
-            //correct guess or wrong guess outcomes
+            //correct guess
             if (userGuess === pick.answer) {
                 stop();
                 rightCount++;
@@ -143,6 +143,8 @@ $(document).ready(function () {
                 $("#answerblock").html("<p>Correct!</p>");
                 hidepicture();
 
+
+                //wrong guess outcomes
             } else {
                 stop();
                 wrongCount++;
